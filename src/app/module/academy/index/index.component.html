@@ -1,1 +1,30 @@
-<p>index works!</p>
+<div class="container">
+    <h1>Academies</h1>
+
+    <a href="#" routerLink="/academy/create/" class="btn btn-success">Create New Academy</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>code</th>
+                <th>title</th>
+                <th>location</th>
+                <th>students</th>
+                <th width="250px">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let academy of academies">
+                <!-- colonne della tabella le prendo da DB -->
+                <td>{{ academy.code }}</td>
+                <td>{{ academy.title }}</td>
+                <td>{{ academy.cityLocation }}</td>
+                <td>{{ academy.studentNumber }}</td>
+                <td>
+                    <a href="#" [routerLink]="['/academy/', academy.code, 'edit']" class="btn btn-primary">Edit</a>
+                    <button type="button" (click)="removeAcademy(academy.code)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
