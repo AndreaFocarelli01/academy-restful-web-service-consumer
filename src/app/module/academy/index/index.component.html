@@ -21,6 +21,7 @@
                 <td>{{ academy.cityLocation }}</td>
                 <td>{{ academy.studentNumber }}</td>
                 <td>
+                    <!-- academy.code è la path variable che ricaviamo -->
                     <a href="#" [routerLink]="['/academy/', academy.code, 'edit']" class="btn btn-primary">Edit</a>
                     <button type="button" (click)="removeAcademy(academy.code)" class="btn btn-danger">Delete</button>
                 </td>

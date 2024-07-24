@@ -10,5 +10,5 @@ export const routes: Routes = [
     //con questi sotto mi sposto nelle varie component create 
     { path: 'academy/index', component: IndexComponent },
     { path: 'academy/create', component: CreateComponent },                 //create.html
-    { path: 'academy/:code/edit', component: EditComponent }                //edit.html
+    { path: 'academy/:code/edit', component: EditComponent }                //edit.html; prima passo il nome della variabile e poi il valore
 ];

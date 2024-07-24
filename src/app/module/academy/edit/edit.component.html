@@ -1,1 +1,38 @@
-<p>edit works!</p>
+<div class="container">
+    <h1>Update Academy</h1>
+
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group">
+            <label for="code">Code:</label>
+            <input formControlName="code" id="code" type="text" [(ngModel)]="academy.code" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="body">Title</label>
+            <input formControlName="title" id="title" type="text" [(ngModel)]="academy.title" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cityLocation">City Location</label>
+            <input formControlName="cityLocation" id="cityLocation" type="text" [(ngModel)]="academy.cityLocation"
+                class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="studentNumber">StudentsNumber</label>
+            <input formControlName="studentNumber" id="studentNumber" type="number" [(ngModel)]="academy.studentNumber"
+                class="form-control">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- cos'è  [(ngModel)] = "nome variabile"
+    l'oggetto io creiamo nella component.TS, ma poi ce lo portiamo dentro aatraverso questo ngModel
+    questo è l'unico Two-Way-Binding che esiste in Angular
+    consente di effettuare una reflection di un oggetto TS, tra un TEMEPLATE ed una classe COMPONENT (e viceversa)
+    per questo usato in tutte le operazioni di UPDATE
+-->
