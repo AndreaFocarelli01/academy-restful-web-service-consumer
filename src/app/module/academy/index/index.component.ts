@@ -47,7 +47,7 @@ export class IndexComponent implements OnInit {
   removeAcademy(code: string) {
     this.academyService.removeAcademiesByCode(code).subscribe(res => {
       console.log(res.data);
-      this.removeAcademy(code);
+      this.getAcademies();
     });
   }
 
